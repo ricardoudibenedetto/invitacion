@@ -1,0 +1,13 @@
+.numeroContador{
+    color: white;
+    padding: 14px 12px;
+    font-size: 2.2rem;
+    border-radius: 6px;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+.separator{
+    font-size: 2rem;
+    padding: 20px 5px;
+}
