@@ -15,8 +15,6 @@ export const ContadorComponent = () => {
 
     return (
         <>
-            <h2 >Faltan</h2>
-
             <div className='d-flex justify-center'>
                 <div>
                     <div className='d-flex align-center'>
