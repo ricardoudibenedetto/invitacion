@@ -3,8 +3,9 @@
   
   line-height: 1.5;
   font-weight: 400;
-
-  color: #a9c299;
+/* 
+  color: #a9c299; */
+  color:#5b7a5b !important;
   /* color: rgba(44, 44, 44, 0.87); */
  /*  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #e1fcc873 66%, rgb(208 255 173 / 36%) 100%); */
   /* background: linear-gradient(180deg,  rgb(208 255 173 / 36%) 0%, #e1fcc873 66%, rgba(255, 255, 255, 0) 100%); */
@@ -24,6 +25,10 @@
 
 .font-montserrat{
   font-family: 'Montserrat', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+  color: #a9c299;
 }
 
 .verdeOscuro{
@@ -67,9 +72,16 @@ h1 {
   line-height: 1.1;
 }
 
-
+p{
+  color: #5b7a5b;
+  font-size: 1rem;
+}
 .d-flex{
   display: flex;
+}
+
+.mt-none{
+  margin-top: 0;
 }
 
 .justify-center{
