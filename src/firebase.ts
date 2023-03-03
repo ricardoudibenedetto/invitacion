@@ -34,15 +34,16 @@ export async function upDateAsist(idUsuario:string, acepto:Boolean) {
   updateDoc(docRef, 'confirmo', acepto );
 }
 
-export async function addUser() {
+export async function addUser(nombre: string, apellido: string) {
+
   try {
-    const docRef = doc(db, "usuarios", "tobiasposso");
+    const docRef = doc(db, "usuarios", `${nombre}${apellido}`);
     setDoc(docRef, {
-      apellido: "posso",
+      apellido: nombre,
       confirmo: false,
-      esAdmin: true,
+      esAdmin: false,
       ingreso: false,
-      nombre: "tobias",
+      nombre: apellido,
       viajaEnBuss: false
     })
     console.log("Document written with ID: ", docRef.id);
