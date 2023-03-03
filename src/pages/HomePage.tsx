@@ -3,35 +3,23 @@ import { AuthContext } from '../auth';
 import { CardComponent } from '../components/card/CardComponent'
 import { ConfirmacionComponent } from '../components/confirmacion/ConfirmacionComponent';
 import { ContadorComponent } from '../components/contador/ContadorComponent'
+import { HeaderComponent } from '../components/header/HeaderComponent';
 import { MapsComponent } from '../components/maps/MapsComponent';
 
 export const HomePage = () => {
-    const { logout, usuario } = useContext( AuthContext );
+    const { usuario } = useContext(AuthContext);
 
-    console.log(usuario)
-    const onLogout = () => {
-        logout( );
-      
-    }
     return (
-        <div className='container margin-top'>
-            <button onClick={onLogout}>salir</button>
-            <h1 className='font-monserrat'>Mis 15 Maia</h1>
+        <div className='container'>
+           <HeaderComponent />
+            <h1 className='font-monserrat mt-none'>Mis 15 Maia</h1>
 
-            <h2>Te invito a festejar mi cumpleaños </h2>
-            <h2 className='my-1'>Sabado 1 abril, 2023</h2>
-            <h1>21:30hs</h1>
+            <p>Te invito a festejar mi cumpleaños </p>
+            <p className='my-1'>Sabado 1 abril, 2023</p>
+            <h2>21:30hs</h2>
             <MapsComponent />
-            <ConfirmacionComponent />
-      {/*       <CardComponent>
-                <>
-                    <h3 className='verdeOscuro'>CBU: 123123123123</h3>
-                    <h3 className='verdeOscuro'>Alias: hola.cama.ruta</h3>
-                </>
-            </CardComponent> */}
-       
             <ContadorComponent />
-
+            <ConfirmacionComponent />
         </div>
     )
 }

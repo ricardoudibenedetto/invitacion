@@ -44,6 +44,11 @@ input:focus-visible{
     transform: scale(.9);
 }
 
+.errorMensagge{
+    width: 250px;
+    text-align: center;
+}
+
 
 
 
