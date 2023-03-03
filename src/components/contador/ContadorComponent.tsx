@@ -21,7 +21,7 @@ export const ContadorComponent = () => {
                 <div>
                     <div className='d-flex align-center'>
                         <span className='numeroContador verdeBackground'>{days.toString().split('')[0]}</span>
-                        <span className='numeroContador verdeBackground'>{days.toString().split('')[1]}</span>
+                        <span className='numeroContador verdeBackground'>{days.toString().split('')[1] ?? '0'}</span>
                     </div>
                     <p className='text-center'>
                         Días
@@ -42,7 +42,7 @@ export const ContadorComponent = () => {
                 <div>
                     <div className='d-flex align-center'>
                         <span className='numeroContador verdeBackground'>{minutes.toString().split('')[0]}</span>
-                        <span className='numeroContador verdeBackground'>{minutes.toString().split('')[1]}</span>
+                        <span className='numeroContador verdeBackground'>{minutes.toString().split('')[1] ?? '0'}</span>
                     </div>
                     <p className='text-center'>
                         Minutos
@@ -50,7 +50,7 @@ export const ContadorComponent = () => {
                 </div>
 
             </div>
-          {/*   <p>
+            {/*   <p>
                 {days} dìas {hours} Horas {minutes} Minutos {seconds} Segundos
             </p> */}
 
@@ -60,11 +60,27 @@ export const ContadorComponent = () => {
 }
 
 function calculateTimeRemaining(targetDate: any) {
-    const distance = new Date(2023, 3, 1, 21, 30).getTime() - new Date().getTime();
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    let distance = new Date(2023, 3, 1, 21, 30).getTime() - new Date().getTime();
+
+
+
+    let milliseconds = distance % 1000;
+    distance = (distance - (milliseconds)) / 1000;
+
+    let seconds = distance % 60
+
+    distance = (distance - seconds) / 60;
+
+    let minutes = distance % 60
+    distance = (distance - minutes) / 60;
+
+    let hours = distance % 24
+    let days = (distance - hours) / 24;
+
+    /*  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+     const seconds = Math.floor((distance % (1000 * 60)) / 1000); */
     return { days, hours, minutes, seconds };
 
 

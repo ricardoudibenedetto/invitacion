@@ -1,0 +1,38 @@
+.radio-button-group {
+    display: inline-block;
+    margin: 10px;
+    font-size: 16px;
+  }
+  
+  .radio-button {
+    text-align: center;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #bbb;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100px; /* Establece el ancho del label */
+  }
+  
+  .radio-button input[type="radio"] {
+    display: none;
+    height: 20px; /* Establece la altura del input */
+  }
+  
+  .radio-button:hover {
+    background-color:#476147 ;
+  }
+  /* 
+  .radio-button input[type="radio"]:checked + .radio-button {
+    background-color: #007bff;
+  }
+ */
+
+ 
+
+
+
+
+  
