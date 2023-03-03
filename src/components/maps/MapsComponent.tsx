@@ -4,7 +4,7 @@ export const MapsComponent = () => {
   return (
     <div >
        
-        <h1 className='font-240'>Salon Antares eventos.</h1>
+        <h1 className='font-240 mt-0'>Salon Antares eventos.</h1>
         <p className='font-125'>Dinamarca 2326, Temperley</p>
       
       <iframe
