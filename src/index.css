@@ -6,8 +6,9 @@
 
   color: #a9c299;
   /* color: rgba(44, 44, 44, 0.87); */
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #e1fcc873 66%, rgb(208 255 173 / 36%) 100%);
-  /* background: white; */
+ /*  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #e1fcc873 66%, rgb(208 255 173 / 36%) 100%); */
+  /* background: linear-gradient(180deg,  rgb(208 255 173 / 36%) 0%, #e1fcc873 66%, rgba(255, 255, 255, 0) 100%); */
+  background: white;
   box-sizing: border-box;
  
   font-synthesis: none;
@@ -15,6 +16,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+.margin-top{
+ margin-top: 10vh !important;
 }
 
 .font-montserrat{
