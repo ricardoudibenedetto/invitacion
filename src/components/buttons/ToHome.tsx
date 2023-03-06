@@ -8,6 +8,6 @@ export const ToHome = () => {
         navigate('/home', { replace: true })
     }
     return (
-        <button className='btn-toHome verdeBackground' onClick={toHome}>{'↩'}</button>
+        <button className='btn-toHome verdeBackground' onClick={toHome}>{'<'}</button>
     )
 }
