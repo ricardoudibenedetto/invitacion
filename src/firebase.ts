@@ -16,7 +16,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 export async function getUsers() {
-  const usuariosLogin = collection(db, 'login');
+  const usuariosLogin = collection(db, 'usuarios');
   const usuariosSnapshot = await getDocs(usuariosLogin);
   const result = usuariosSnapshot.docs.map(doc => doc.data());
   console.log(result)
@@ -30,7 +30,7 @@ export async function getUser(usuario: string ) {
 }
 
 export async function upDateAsist(idUsuario:string, acepto:Boolean) {
-  const docRef = doc(db, "usuarios", idUsuario);
+  const docRef = doc(db, "usuarios", idUsuario.replaceAll(' ', '').toLowerCase());
   updateDoc(docRef, 'confirmo', acepto );
 }
 
