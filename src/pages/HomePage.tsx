@@ -11,7 +11,7 @@ export const HomePage = () => {
     const { usuario } = useContext(AuthContext);
 
     return (
-        <div className='container'>
+        <div className='container d-flex flex-colum gap-20 justify-center'>
            <HeaderComponent />
             <h1 className='font-monserrat mt-none px-3 font-size-300'>Maia</h1>
 {/* 

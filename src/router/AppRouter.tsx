@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
-import { LoginPage } from '../pages/LoginPage';
-import { HomePage } from '../pages/HomePage';
 
+
+import { CronogramaPage, HomePage, ListaInvitadosPage, LoginPage, MicroPage } from '../pages';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
 
@@ -28,6 +28,9 @@ export const AppRouter = () => {
           <PrivateRoute>
             <Routes>
               <Route path="home" element={<HomePage />} />
+              <Route path="listaInvitados" element={<ListaInvitadosPage />} />
+              <Route path="micro" element={<MicroPage />} />
+              <Route path="cronograma" element={<CronogramaPage />} />
             </Routes>
           </PrivateRoute>
         } />
