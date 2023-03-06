@@ -30,7 +30,6 @@ export const LoginFormComponent = () => {
       await getUser(idUsuario)
         .then((usuarioFS) => {
           if (usuarioFS == undefined) {
-            /* alert('el usuario que ingresaste no existe') */
             setIsErrorLogin(true)
             setIsLoader(false)
             return
@@ -40,7 +39,6 @@ export const LoginFormComponent = () => {
         })
         .catch(
           error => {
-            /* alert('el usuario que ingresaste no existe') */
             setIsErrorLogin(true)
             setIsLoader(false)
           }
