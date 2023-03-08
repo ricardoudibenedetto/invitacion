@@ -34,6 +34,13 @@ export async function upDateAsist(idUsuario:string, acepto:Boolean) {
   updateDoc(docRef, 'confirmo', acepto );
 }
 
+export async function actualizarListaFS(nombre: string, apellido: string){
+  let idUsuario =  nombre + apellido ;
+  const docRef = doc(db, "usuarios", idUsuario.replaceAll(' ', '').toLowerCase());
+  updateDoc(docRef, 'apellido', apellido);
+  updateDoc(docRef, 'nombre', nombre);
+}
+
 export async function addUser(nombre: string, apellido: string) {
 
   try {
