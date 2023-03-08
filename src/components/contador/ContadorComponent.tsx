@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { FadeInComponent } from '../fadeIn/FadeInComponent';
 import './style.css'
 const targetDate = '04-01-2023'
 export const ContadorComponent = () => {
@@ -14,14 +15,14 @@ export const ContadorComponent = () => {
     const { days, hours, minutes, seconds } = timeRemaining;
 
     return (
-        <>
+        <FadeInComponent>
             <div className='d-flex justify-center w-100'>
                 <div>
                     <div className='d-flex align-center'>
                         <span className='numeroContador verdeBackground'>{days.toString().split('')[0]}</span>
                         <span className='numeroContador verdeBackground'>{days.toString().split('')[1] ?? '0'}</span>
                     </div>
-                    <p className='text-center'>
+                    <p className='text-center font-size-1'>
                         Días
                     </p>
                 </div>
@@ -32,7 +33,7 @@ export const ContadorComponent = () => {
 
                         <span className='numeroContador verdeBackground'>{hours.toString().split('')[1] ?? '0'} </span>
                     </div>
-                    <p className='text-center'>
+                    <p className='text-center font-size-1'>
                         Horas
                     </p>
                 </div>
@@ -42,18 +43,12 @@ export const ContadorComponent = () => {
                         <span className='numeroContador verdeBackground'>{minutes.toString().split('')[0]}</span>
                         <span className='numeroContador verdeBackground'>{minutes.toString().split('')[1] ?? '0'}</span>
                     </div>
-                    <p className='text-center'>
+                    <p className='text-center font-size-1'>
                         Minutos
                     </p>
                 </div>
-
             </div>
-            {/*   <p>
-                {days} dìas {hours} Horas {minutes} Minutos {seconds} Segundos
-            </p> */}
-
-        </>
-
+        </FadeInComponent>
     );
 }
 
