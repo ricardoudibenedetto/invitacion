@@ -1,7 +1,9 @@
 import React from 'react'
+import { FadeInComponent } from '../fadeIn/FadeInComponent'
 import './style.css'
 export const MapsComponent = () => {
   return (
+    <FadeInComponent>
     <div className='d-flex flex-colum' >
        
         <h1 className='font-240 mt-0'>Salon Antares eventos.</h1>
@@ -13,5 +15,6 @@ export const MapsComponent = () => {
         loading="lazy"
       ></iframe>
     </div>
+    </FadeInComponent>
   )
 }
