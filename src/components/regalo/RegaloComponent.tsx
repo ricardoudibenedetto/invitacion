@@ -1,5 +1,4 @@
-import { CardComponent } from '../card/CardComponent'
-import { FadeInComponent } from '../fadeIn/FadeInComponent'
+import { CardComponent, FadeInComponent } from '../'
 
 export const RegaloComponent = () => {
     return (

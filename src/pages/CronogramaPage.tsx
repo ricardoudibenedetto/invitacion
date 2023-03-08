@@ -1,12 +1,11 @@
-import React from 'react'
-import { ToHome } from '../components/buttons/ToHome'
 
+import { ToHome } from '../components'
 export const CronogramaPage = () => {
   return (
     <div>
-            <h1>Cronograma</h1>
+      <h1>Cronograma</h1>
 
-            <ToHome />
-        </div>
+      <ToHome />
+    </div>
   )
 }

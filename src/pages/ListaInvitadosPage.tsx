@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import { ToHome } from '../components/buttons/ToHome';
 
-import { HeaderComponent } from '../components/header/HeaderComponent';
-import { InvitadosComponent } from '../components/invitados/InvitadosComponent';
-import { LoaderComponent } from '../components/loader/LoaderComponent';
-import { actualizarListaFS, getUsers } from '../firebase';
-import { formatTitleCase } from '../helpers/formatTitleCase';
+import { getUsers } from '../firebase';
 import { UsuarioI } from '../types/types'
+import { 
+  HeaderComponent, 
+  InvitadosComponent, 
+  LoaderComponent 
+} from '../components';
 
 
 export const ListaInvitadosPage = () => {
   const [usuarios, setUsuarios] = useState<UsuarioI[]>([])
   const [isLoader, setIsLoader] = useState(false)
-  
+
   const obtenerUsuarios = () => {
     setIsLoader(true)
     getUsers().then((users: UsuarioI[]) => {
@@ -21,13 +22,12 @@ export const ListaInvitadosPage = () => {
       setIsLoader(false)
     })
   }
+  
   useEffect(() => {
     obtenerUsuarios();
   }, [])
 
-
   return (
-
     <div className='container '>
       <HeaderComponent />
       {
@@ -41,6 +41,5 @@ export const ListaInvitadosPage = () => {
       }
       <ToHome />
     </div>
-
   )
 }

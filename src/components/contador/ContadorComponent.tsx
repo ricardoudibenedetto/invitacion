@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FadeInComponent } from '../fadeIn/FadeInComponent';
 import './style.css'
 const targetDate = '04-01-2023'

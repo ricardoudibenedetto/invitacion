@@ -1,4 +1,3 @@
-import { formatTitleCase } from '../../helpers/formatTitleCase'
 import { UsuarioI } from '../../types/types'
 import { InvitadoItem } from './InvitadoItem'
 import './style.css'

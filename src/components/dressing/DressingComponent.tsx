@@ -1,4 +1,3 @@
-import React from 'react'
 import { FadeInComponent } from '../fadeIn/FadeInComponent'
 
 export const DressingComponent = () => {

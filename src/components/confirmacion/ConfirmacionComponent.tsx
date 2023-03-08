@@ -1,8 +1,7 @@
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../auth';
 import { upDateAsist } from '../../firebase';
-import { userState } from '../../hooks/userState';
-import { FadeInComponent } from '../fadeIn/FadeInComponent';
+import { FadeInComponent } from '../';
 import './style.css'
 
 
@@ -18,9 +17,6 @@ export const ConfirmacionComponent = () => {
         const target = event.target;
         const value = target.type === "checkbox" ? target.checked : target.value;
         const name = target.name;
-
-        /*  modificarAsistencia(value == 'true'? true : false) */
-        /*   debugger */
         setUsuario({ ...usuario, confirmo: value == 'true' ? true : false })
         upDateAsist(`${usuario.nombre}${usuario.apellido}`, value == 'true' ? true : false)
         console.log(usuario)

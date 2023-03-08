@@ -1,11 +1,9 @@
-import React from 'react'
-import { ToHome } from '../components/buttons/ToHome'
+import { ToHome } from '../components'
 
 export const MicroPage = () => {
     return (
         <div>
             <h1>micro</h1>
-
             <ToHome />
         </div>
     )

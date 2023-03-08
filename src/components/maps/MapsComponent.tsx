@@ -1,5 +1,4 @@
-import React from 'react'
-import { FadeInComponent } from '../fadeIn/FadeInComponent'
+import { FadeInComponent } from '../'
 import './style.css'
 export const MapsComponent = () => {
   return (

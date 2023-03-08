@@ -1,23 +1,16 @@
 import { useContext, useRef, useState } from 'react';
 import { AuthContext } from '../../auth';
 import './style.css'
-import { getUsers, addUser, getUser } from '../../firebase';
+import { addUser, getUser } from '../../firebase';
 import { LoaderComponent } from '../loader/LoaderComponent';
-import { UsuarioI } from '../../types/types';
 export const LoginFormComponent = () => {
   const { login } = useContext(AuthContext);
-  const [isLoader, setIsLoader] = useState(false)
-  const [isErrorLogin, setIsErrorLogin] = useState(false)
-  /*   const usuarios = getUser().then( usuario => {
-  
-      let a = usuario
-      console.log(a)
-    }); */
-  /*   const [usuario, setUsuario] = useState('');
-    const [password, setPassword] = useState(''); */
+  const [isLoader, setIsLoader] = useState(false);
+  const [isErrorLogin, setIsErrorLogin] = useState(false);
 
   const userRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
+
   const onLogin = async () => {
     setIsLoader(true)
     if (userRef.current && passwordRef.current) {
@@ -44,8 +37,8 @@ export const LoginFormComponent = () => {
           }
         )
     }
-
   }
+  
   return (
     <form >
       <div className='form'>

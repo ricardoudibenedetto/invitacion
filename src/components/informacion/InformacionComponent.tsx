@@ -1,4 +1,4 @@
-import { FadeInComponent } from '../fadeIn/FadeInComponent'
+import { FadeInComponent } from '../'
 import './style.css'
 export const InformacionComponent = () => {
   return (
