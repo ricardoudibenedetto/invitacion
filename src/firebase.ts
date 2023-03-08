@@ -46,11 +46,11 @@ export async function addUser(nombre: string, apellido: string) {
   try {
     const docRef = doc(db, "usuarios", `${nombre}${apellido}`);
     setDoc(docRef, {
-      apellido: nombre,
+      apellido: apellido,
       confirmo: false,
       esAdmin: false,
       ingreso: false,
-      nombre: apellido,
+      nombre: nombre,
       viajaEnBuss: false
     })
     console.log("Document written with ID: ", docRef.id);
