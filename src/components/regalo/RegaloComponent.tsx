@@ -5,7 +5,7 @@ export const RegaloComponent = () => {
         <FadeInComponent>
             <CardComponent>
                 <>
-                    <p>Si deseas hacerme un regalo: <br />
+                    <p>Si deseás hacerme un regalo: <br />
                         Alias: Maiaposso15 <br />
                         CVU: 0000003100022941475477</p>
                 </>
