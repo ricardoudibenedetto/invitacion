@@ -5,7 +5,7 @@ export const InformacionComponent = () => {
     <FadeInComponent>
       <div>
         <p>
-          Queria invitarte a formar parte de <b>una noche especial.</b> <br />
+          Quiero invitarte a formar parte de <b>una noche especial.</b> <br />
           Te invito a celebrar <b>mis 15 años.</b>
         </p>
         <h1 className='mb-none text-center pr-2'>Sábado 1 de <br />

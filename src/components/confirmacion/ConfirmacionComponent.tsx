@@ -39,7 +39,7 @@ export const ConfirmacionComponent = () => {
                             checked={usuario.confirmo}
                             onChange={handleInputChange}
                         />
-                        Asistir
+                        Asistiré
                     </label>
                     <label className={`radio-button ${!usuario.confirmo ? 'backgroundVerdeOscuro' : ''}`}>
                         <input
@@ -49,7 +49,7 @@ export const ConfirmacionComponent = () => {
                             checked={!usuario.confirmo}
                             onChange={handleInputChange}
                         />
-                        No asistir
+                        No asistiré
                     </label>
                 </div>
             </form>
