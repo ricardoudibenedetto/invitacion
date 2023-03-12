@@ -28,7 +28,7 @@ export const ListaInvitadosPage = () => {
   }, [])
 
   return (
-    <div className='container '>
+    <div className='container'>
       <HeaderComponent />
       {
         !isLoader ?
