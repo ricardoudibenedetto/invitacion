@@ -51,9 +51,7 @@ h1,h2,h3,h4,h5,h6{
 .mt-0{
   margin-top: 0px;
 }
-section{
-  max-width: 270px;
-}
+
 a{text-decoration-color: #5b7a5b;}
 .px-3{
   padding: 0 100px;

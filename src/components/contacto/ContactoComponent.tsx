@@ -3,7 +3,7 @@ import './style.css'
 export const ContactoComponent = () => {
     return (
         <FadeInComponent >
-            <section>
+            <section className='containerText'>
                 <p className='text-center' >Para no perdernos de nada etiquetame en todo lo que subas esa noche.
                 <br /><br />
                     <div className='centerElements'>
