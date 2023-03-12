@@ -21,8 +21,8 @@ export const HeaderComponent = () => {
                 usuario.esAdmin ?
                     <nav className='d-flex gap-20'>
                         <a onClick={() => navigateTo('/listaInvitados')}>Invitados</a>
-                        <a onClick={() => navigateTo('/cronograma')}>Cronograma</a>
-                        <a onClick={() => navigateTo('/micro')}>Micro</a>
+                       {/*  <a onClick={() => navigateTo('/cronograma')}>Cronograma</a>
+                        <a onClick={() => navigateTo('/micro')}>Micro</a> */}
                     </nav> :
                     <></>
             }

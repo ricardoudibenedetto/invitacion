@@ -1,0 +1,39 @@
+.borde-verde {
+    display: inline-block;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: 3px #5b7a5b solid;
+    border-radius: 9px;
+}
+
+.punto-verde {
+    width: 0px;
+    height: 0px;
+    border: 2px #5b7a5b solid;
+    border-radius: 5px;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+}
+
+.centro-verde {
+    width: 8px;
+    height: 8px;
+    border: 3px #5b7a5b solid;
+    border-radius: 8px;
+    position: absolute;
+    right: calc(50% - 7px);
+    top: calc(50% - 6px);
+}
+
+.centerElements{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+section{
+    padding: 0px 55px;
+}

@@ -6,7 +6,6 @@ export const userState = () => {
     const [usuario, setUsuario] = useState<UsuarioI>()
   
     const modificarAsistencia = (acepto: boolean) => {
-        debugger
         let usua = usuario 
         setUsuario( {...usuario, confirmo: acepto})
     }

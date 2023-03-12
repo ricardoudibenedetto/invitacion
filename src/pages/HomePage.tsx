@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import { AuthContext } from '../auth';
 import { 
     ConfirmacionComponent, 
+    ContactoComponent, 
     ContadorComponent, 
     DressingComponent, 
     HeaderComponent, 
@@ -23,6 +24,7 @@ export const HomePage = () => {
             <MapsComponent />
             <DressingComponent />
             <RegaloComponent />
+            <ContactoComponent />
             <ContadorComponent />
             <ConfirmacionComponent />
         </div>

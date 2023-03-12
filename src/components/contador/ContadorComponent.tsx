@@ -19,8 +19,8 @@ export const ContadorComponent = () => {
             <div className='d-flex justify-center w-100'>
                 <div>
                     <div className='d-flex align-center'>
-                        <span className='numeroContador verdeBackground'>{days.toString().split('')[0]}</span>
-                        <span className='numeroContador verdeBackground'>{days.toString().split('')[1] ?? '0'}</span>
+                        <span className='numeroContador verdeBackground'>{days.toString().split('')[1] ? days.toString().split('')[0] : '0'}</span>
+                        <span className='numeroContador verdeBackground'>{days.toString().split('')[1] ?? days.toString().split('')[0]} </span>
                     </div>
                     <p className='text-center font-size-1'>
                         Días
@@ -29,9 +29,8 @@ export const ContadorComponent = () => {
                 <span className='separator'>:</span>
                 <div>
                     <div className='d-flex align-center'>
-                        <span className='numeroContador verdeBackground'>{hours.toString().split('')[0]}</span>
-
-                        <span className='numeroContador verdeBackground'>{hours.toString().split('')[1] ?? '0'} </span>
+                        <span className='numeroContador verdeBackground'>{hours.toString().split('')[1] ? hours.toString().split('')[0] : '0'}</span>
+                        <span className='numeroContador verdeBackground'>{hours.toString().split('')[1] ?? hours.toString().split('')[0]} </span>
                     </div>
                     <p className='text-center font-size-1'>
                         Horas
@@ -40,8 +39,8 @@ export const ContadorComponent = () => {
                 <span className='separator'>:</span>
                 <div>
                     <div className='d-flex align-center'>
-                        <span className='numeroContador verdeBackground'>{minutes.toString().split('')[0]}</span>
-                        <span className='numeroContador verdeBackground'>{minutes.toString().split('')[1] ?? '0'}</span>
+                        <span className='numeroContador verdeBackground'>{minutes.toString().split('')[1] ? minutes.toString().split('')[0] : '0'}</span>
+                        <span className='numeroContador verdeBackground'>{minutes.toString().split('')[1] ?? minutes.toString().split('')[0]} </span>
                     </div>
                     <p className='text-center font-size-1'>
                         Minutos
