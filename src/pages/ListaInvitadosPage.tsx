@@ -8,25 +8,13 @@ import {
   InvitadosComponent, 
   LoaderComponent 
 } from '../components';
+import { useInvitados } from '../hooks/useInvitados';
 
 
 export const ListaInvitadosPage = () => {
-  const [usuarios, setUsuarios] = useState<UsuarioI[]>([])
-  const [isLoader, setIsLoader] = useState(false)
 
-  const obtenerUsuarios = () => {
-    setIsLoader(true)
-    getUsers().then((users: UsuarioI[]) => {
-      console.log(users)
-      setUsuarios(users);
-      setIsLoader(false)
-    })
-  }
+  const {isLoader, usuarios} = useInvitados();
   
-  useEffect(() => {
-    obtenerUsuarios();
-  }, [])
-
   return (
     <div className='container'>
       <HeaderComponent />

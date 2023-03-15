@@ -6,7 +6,6 @@ import './style.css'
 
 
 export const ConfirmacionComponent = () => {
-    /* const {usuario, setUsuario, modificarAsistencia} = userState() */
     const { usuario, setUsuario } = useContext(AuthContext)
 
     const [formState, setFormState] = useState({

@@ -1,10 +1,22 @@
-import { HeaderComponent, ToHome } from "../components"
+import { HeaderComponent, ListaIngresoComponent, LoaderComponent, ToHome } from "../components"
+import { useInvitados } from "../hooks/useInvitados";
 
 export const IngresoPage = () => {
+
+    const { isLoader, usuarios, modificarIngreso } = useInvitados();
+
     return (
         <div className='container'>
             <HeaderComponent />
-            <h1>Lista de ingreso</h1>
+            {
+                !isLoader ?
+                    <>
+                    <ListaIngresoComponent usuarios={usuarios} modificarIngreso={modificarIngreso} />
+                    </> :
+                    <div className='centerLoad'>
+                        <LoaderComponent />
+                    </div>
+            }
             <ToHome />
         </div>
     )

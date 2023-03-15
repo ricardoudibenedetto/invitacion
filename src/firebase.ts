@@ -33,13 +33,18 @@ export async function upDateAsist(idUsuario:string, acepto:Boolean) {
   const docRef = doc(db, "usuarios", idUsuario.replaceAll(' ', '').toLowerCase());
   updateDoc(docRef, 'confirmo', acepto );
 }
+export async function upDateIngreso(idUsuario:string, ingreso:Boolean) {
+  const docRef = doc(db, "usuarios", idUsuario.replaceAll(' ', '').toLowerCase());
+  const docSnap = await updateDoc(docRef, 'ingreso', ingreso );
+  return docSnap
+}
 
-export async function actualizarListaFS(nombre: string, apellido: string){
+/* export async function actualizarListaFS(nombre: string, apellido: string){
   let idUsuario =  nombre + apellido ;
   const docRef = doc(db, "usuarios", idUsuario.replaceAll(' ', '').toLowerCase());
   updateDoc(docRef, 'apellido', apellido);
   updateDoc(docRef, 'nombre', nombre);
-}
+} */
 
 export async function addUser(nombre: string, apellido: string) {
 

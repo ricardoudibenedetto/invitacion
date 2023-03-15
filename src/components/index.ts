@@ -8,6 +8,7 @@ export * from './fadeIn/FadeInComponent';
 export * from './header/HeaderComponent';
 export * from './index';
 export * from './informacion/InformacionComponent';
+export * from './ingresos/ListaIngresoComponent';
 export * from './invitados/InvitadoItem';
 export * from './invitados/InvitadosComponent';
 export * from './loader/LoaderComponent';
