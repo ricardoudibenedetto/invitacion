@@ -25,7 +25,7 @@ export const HomePage = () => {
             <DressingComponent />
             <RegaloComponent />
             <ContactoComponent />
-            <ContadorComponent />
+           {/*  <ContadorComponent /> */}
             <ConfirmacionComponent />
         </div>
     )
